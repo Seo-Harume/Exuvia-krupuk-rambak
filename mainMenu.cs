@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
     [Header("Canvas References")]
     public GameObject mainMenuCanvas;
     public GameObject settingsCanvas;
+    public GameObject exitCanvas;
 
     public void StartGame()
     {
@@ -27,6 +28,19 @@ public class MainMenu : MonoBehaviour
         mainMenuCanvas.SetActive(true);
     }
 
+    // Tampilkan Exit Popup
+    public void ExitPopup()
+    {
+        exitCanvas.SetActive(true);
+    }
+
+    // Sembunyikan Exit Popup
+    public void CancelExit()
+    {
+        exitCanvas.SetActive(false);
+    }
+
+    // Keluar dari Game
     public void ExitGame()
     {
         Debug.Log("Game exited.");
